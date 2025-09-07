@@ -4,7 +4,6 @@ if ('serviceWorker' in navigator) {
     .catch(err => console.log('Service Worker Failed:', err));
 }
 
-
 document.getElementById('minimize').addEventListener('click', () => {
     window.electronAPI.minimize();
 });
@@ -189,3 +188,4 @@ function createPlaylist() {
 // ======== INIT ========
 createPlaylist();
 loadSong(songIndex);
+
