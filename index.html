@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="theme-color" content="#1e40af">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>music player</title>
+        <!-- PWA Manifest -->
+        <link rel="manifest" href="manifest.json">
+        <!-- iOS Meta Tags -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="apple-mobile-web-app-title" content="musicplayer">
+    </head>
+
+<body>
+    <div class="whole">
+        <div class="top_container">
+            <div class="title_div">
+                <label class="title">musicplayer.exe</label>
+            </div>
+            <div class="btn_div">
+                <button><i class="fa-solid fa-minus btn" id="minimize"></i></button> <!-- Minimize -->
+                <button><i class="fa-solid fa-square btn"></i></button> <!-- Maximize -->
+                <button><i class="fa-solid fa-xmark btn" id="close"></i></button> <!-- Close -->
+            </div>
+        </div>
+
+        <div class="file_container">
+            <div class="container">
+                <label><u>F</u>ile</label>
+                <label><u>P</u>lay</label>
+                <label><u>O</u>ptions</label>
+                <label><u>V</u>iew</label>
+                <label><u>H</u>elp</label>
+            </div>
+        </div>
+
+        <div class="music_player_container">
+            <div class="music_container">
+                <div>
+                    <div class="albumcover" id="albumcover"></div>
+                </div>
+                <div class="music">
+                    <div class="music content">
+                        <label class="song_title"></label><br>
+                        <label class="singer"></label>
+                        <audio id="audio"></audio>
+                    </div>
+                    <div class="progress_container">
+                        <div class="progress"></div>
+                        <div class="time_div">
+                            <label class="start time">00:00</label>
+                            <label class="end time">0:00</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="music_control">
+                <button class="reverse" id="reverse">⏮</button>
+                <button class="play" id="play">▶</button>
+                <button class="next" id="next">⏭</button>
+                <button class="stop" id="stop">⏹</button>
+            </div>
+
+            <div class="playlist_container" id="playlist_container">
+                <div class="playlist_item" id="playlist_item">
+                    <div class="track_info">
+                        <p class="title" id="title"></p>
+                        <p class="artist" id="artist""></p>
+                    </div>
+                </div>
+
+                <!-- <div class="playlist_item" data-src="music/big girls dont cry.mp3">
+                    <div class="track_info">
+                        <p class="title">Big Girls Dont Cry</p>
+                        <p class="artist">Fergie</p>
+                    </div>
+                </div>
+
+                <div class="playlist_item" data-src="music/cool about it.mp3">
+                    <div class="track_info">
+                        <p class="title">Cool About It</p>
+                        <p class="artist">boygenius</p>
+                    </div>
+                </div>
+
+                <div class="playlist_item" data-src="music/margaret.mp3">
+                    <div class="track_info">
+                        <p class="title">Margaret</p>
+                        <p class="artist">Lana Del Rey</p>
+                    </div>
+                </div>
+
+                <div class="playlist_item" data-src="music/need you know.mp3">
+                    <div class="track_info">
+                        <p class="title">Need You Now</p>
+                        <p class="artist">Lady Antebellum</p>
+                    </div>
+                </div>
+
+                <div class="playlist_item" data-src="music/out of reach.mp3">
+                    <div class="track_info">
+                        <p class="title">Out of Reach</p>
+                        <p class="artist">Gabrielle</p>
+                    </div>
+                </div>
+
+                <div class="playlist_item" data-src="music/sway.mp3">
+                    <div class="track_info">
+                        <p class="title">Sway</p>
+                        <p class="artist">Bic Runga</p>
+                    </div>
+                </div>
+
+                <div class="playlist_item" data-src="music/when she cries.mp3">
+                    <div class="track_info">
+                        <p class="title">When She Cries</p>
+                        <p class="artist">Restless Heart</p>
+                    </div>
+                </div> -->
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <script src="function.js"></script>
+
+</body>
+</html>

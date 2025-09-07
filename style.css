@@ -1,0 +1,300 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "myfont";
+    src: url(myfont.ttf);
+}
+
+body{
+    font-family: 'myfont';  
+    background: #ead9d4;
+    max-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    overflow: hidden;
+    /* padding: 20px; */
+    
+}
+
+.whole{
+    box-shadow: 2px 2px 0 #433455;
+    border: 2px solid #333;
+    max-width: 400px;               /* Or any fixed width */
+    margin: 40px auto;          /* Center horizontally */
+    border-radius: 8px;
+    background-color: #222;
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    flex-direction: column;     /* Stack titlebar + content */
+}
+
+.top_container{
+    width: 100%;
+    max-width: 400px;
+    background: #433455;
+    overflow: hidden;
+    display: flex;
+    height: 40px;
+    justify-content: space-between;
+    padding: 5px;
+    font-family: 'myfont';
+    font-size: 20px;
+    box-shadow: 2px 2px 0 #433455;
+}
+
+.title_div{
+    padding: 2px;
+    float: left;
+}
+
+.title{
+    color: #ead9d4;
+    
+}
+
+.btn {
+    padding: 2px;
+    float: right;
+    border: 2px solid #433455;
+    color: #c1cebc;
+    background-color: #726675;
+    font-size: 12px;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.2s;
+    image-rendering: pixelated;
+    box-shadow: 2px 2px 0 #000
+}
+
+.btn:hover{
+    background-color: #433455;
+}
+
+.file_container{
+    background: #726675;
+    height: 35px;
+    width: 100%;
+    max-width: 400px;
+    padding: 5px;
+    box-shadow: 2px 2px 0 #433455;
+}
+
+.container label{
+    color: #ead9d4;
+    padding: 5px;
+    font-family: 'myfont';
+    font-size: 15px;
+}
+
+.music_player_container{
+    background: #c1cebc;
+    height: 400px;
+    width: 300px;
+    max-width: 400px;
+    border: #433455;
+    box-shadow: 2px 2px 0 #433455;
+
+}
+
+.music_container {
+    background: #433455;
+    display: flex;
+    /* justify-content: space-between; */
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.albumcover{
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    border: 2px solid #726675;
+    background-image: url(maki.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+}
+
+.music{
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    white-space: pre-line;
+    flex-direction: column;
+    line-height: .5;
+}
+
+.music label{
+    font-family: 'myfont';
+    color: #ead9d4;
+}
+
+.song_title{
+    font-size: 20px;
+    display: inline-block;
+    padding-left: 50%;
+    animation: slideTitle 8s linear infinite;
+}
+
+.singer{
+    font-size: 15px;
+}
+
+.music_control{
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'myfont';
+}
+
+.music_control button{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #433455;
+    color: #c1cebc;
+    background-color: #726675;
+    font-size: 12px;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.2s;
+    image-rendering: pixelated;
+    box-shadow: 2px 2px 0 #000;
+}
+
+.music_control button:hover{
+    background-color: #433455;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.progress_container{
+    width: 100%;
+    height: 10px;
+    background-color: #726675;
+    border: 2px solid #222;
+    border-radius: 4px;
+    margin: 10px 0;
+    position: relative;
+    image-rendering: pixelated;
+}
+
+/* .progress{
+    width: 0%;
+    height: 100%;
+    background-color: #433455;
+    border-radius: 2px;
+} */
+
+.time{
+    font-size: 10px;
+}
+
+.time_div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.playlist_container{
+    background: #433455;
+    margin: 10px;
+    height: 200px;
+    padding: 3px;
+    max-height: 250px; /* Fixed height */
+    overflow-y: auto; /* Enables vertical scrollbar */
+    color: #c1cebc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 0 #433455;
+    font-family:'myfont';
+
+}
+
+
+/* Custom Scrollbar Styling */
+.playlist_container::-webkit-scrollbar {
+    width: 5px;
+}
+
+.playlist_container::-webkit-scrollbar-track {
+    background: #222; 
+    border-radius: 10px;
+}
+
+.playlist_container::-webkit-scrollbar-thumb {
+    background: #726675; 
+    border-radius: 2px;
+}
+
+.playlist_container::-webkit-scrollbar-thumb:hover {
+    background: #c1cebc;
+}
+
+/* Playlist Items */
+.playlist_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    border-bottom: 1px solid #726675;
+}
+
+/* Last item without border */
+.playlist_item:last-child {
+    border-bottom: none;
+}
+
+/* Track Info */
+.track_info {
+    flex: 1;
+}
+
+.track_info .title {
+    font-size: 15px;
+    margin: 2px;
+    padding: 2px;
+    /* font-weight: bold; */
+}
+
+.track_info .artist {
+    font-size: 12px;
+    pad: 2px;
+    margin: 2px;
+    color: #726675;
+}
+
+.track_info:hover{
+    background-color: #191420;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.content{
+    overflow: hidden;             /* Hide overflow */
+    white-space: nowrap;          /* Prevent wrapping */
+    position: relative;
+    width: 120px;;
+}
+
+/* Animation keyframes */
+@keyframes slideTitle {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
