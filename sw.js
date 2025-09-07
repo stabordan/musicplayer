@@ -3,7 +3,7 @@ const urlsToCache = [
   '/',
   '/index.html',
   '/style.css',
-  '/script.js',
+  '/function.js',
   '/lol.png',
   '/lol.png'
 ];
@@ -27,3 +27,4 @@ self.addEventListener('fetch', event => {
       .then(response => response || fetch(event.request))
   );
 });
+
